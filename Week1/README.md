@@ -53,9 +53,125 @@ Useful Link: http://blog.sina.com.cn/s/blog_7c447f810100wf1j.html
 
 10. 如何计算 number of syllables will involve looking at the characters in a string.
 
-11. 注意enhanced for loop的使用，也即for-each loop的使用。
+11. 注意enhanced for loop的使用，也即for-each loop的使用。增强for循环不能对String对象使用，不过当String调用toCharArray()方法后
+可以对该字符数组使用for-each loop.
 
-12. 
+12. String[]	split(String regex)
+Splits this string around matches of the given regular expression.
+
+注意！！Trailing empty strings are therefore not included in the resulting array.
+The string "boo:and:foo", for example, yields the following results with these expressions:
+
+Regex	Result
+:	{ "boo", "and", "foo" }
+o	{ "b", "", ":and:f" }
+
+
+13. int	indexOf(String str)
+Returns the index within this string of the first occurrence of the specified substring.如果找不到，则return -1
+
+14. char[]	toCharArray()
+Converts this string to a new character array.相当于是return了一个new copy array.
+
+15. Regular Expression: Characters are base units.
+有3种方法，对正则表达式进行扩展：repetition, concatenation, alternation(either/or)
+然后可以对这些方法进行组合。
+
+Example 1 (repetition):
+--------------
+String text = "Hello  hello?"
+String[] words = text.split(" +");
+￼
+Matches 1 or more spaces in a row
+--------------
+
+
+Example 2 (concatenation):
+----------------------------
+
+public abstract class Document { 
+	...
+	protected List<String> getTokens(String pattern){
+	...	
+	}
+}
+
+Assume you have a Document object, d, whose text is
+"Splitting a string, it's as easy as 1 2 33! Right?" 
+
+d.getTokens("it"); ---> ["it", "it"]  注意我们是返回的token, 而不是返回按照token split后的内容。
+Two regular expressions side by side, matches when both appear one after the other
+
+--------------------------------------------------------
+
+
+Example 3 (concatenation+repetition)
+------------------------------------
+Assume you have a Document object, d, whose text is
+"Splitting a string, it's as easy as 1 2 33!  Right?"
+
+d.getTokens("it+");  ----> ["itt", "it"]
++ means "one or more"
+
+d.getTokens("i(t+)");  ----> ["itt", "it"]
+use parenthesis to explicitly grouping regular expression
+
+d.getTokens("it*"); ---> ["itt", "i", "i", "it", "i"]
+* means "zero or more"
+
+------------------------------------------------------------
+
+Example 4 (alternation)
+------------------------------------
+
+Assume you have a Document object, d, whose text is
+"Splitting a string, it's as easy as 1 2 33!  Right?"
+
+d.getTokens("it|st"); ----> ["it", "st", "it"]
+| means OR
+------------------------------------
+
+
+Example 5 (set)
+--------------------------------
+Assume you have a Document object, d, whose text is
+"Splitting a string, it's as easy as 1 2 33!  Right?"
+
+d.getTokens("[123]"); ----> ["1", "2", "3", "3"]
+[ ] mean match "anything in the set"
+￼￼￼￼￼￼
+￼￼￼
+
+Example 6 (range)
+------------------------------------
+
+Assume you have a Document object, d, whose text is
+"Splitting a string, it's as easy as 1 2 33! Right?" 
+
+d.getTokens("[1-3]"); ----> ["1", "2", "3", "3"]
+- indicates a range (any character between 1 and 3)
+￼￼￼
+
+Assume you have a Document object, d, whose text is
+"Splitting a string, it's as easy as 1 2 33! Right?"
+
+d.getTokens("[a-f]"); --> ["a", "a", "e", "a", "a"]
+- indicates a range (any character between a and f)
+￼￼￼
+
+
+Example 7 (Excluding)
+-------------------------------
+Assume you have a Document object, d, whose text is
+"Splitting a string, it's as easy as 1 2 33!  Right?"
+
+d.getTokens("[^a-z123 ]"); ---> ["S", ",", "'", "!", "R", "?"] 
+^ indicates NOT any characters in this set
+
+
+
+
+
 
 
 
