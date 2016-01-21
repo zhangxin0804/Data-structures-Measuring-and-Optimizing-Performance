@@ -168,6 +168,17 @@ Assume you have a Document object, d, whose text is
 d.getTokens("[^a-z123 ]"); ---> ["S", ",", "'", "!", "R", "?"] 
 ^ indicates NOT any characters in this set
 
+-----------------------------------------------------
+
+Expression 			Matches
+￼￼"a*" 			Zero or more a's
+￼￼"a+" 			1 or more a's
+  "[a-f]" 		Any character between a and f
+￼ "[^a-cz]" 	Any character which is not between a-c and not z
+￼ "[abc]+" 		1 or more of the character a, b, or c in a row
+￼ "abc" 		The characters abc in a row
+  "a|b" 	 	The character a or the character b
+￼
 
 
 
