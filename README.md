@@ -9,4 +9,8 @@ HashMap.
 
 5. The project for this course is to build a smart text editor/processor that incorporates “intelligent” behaviors of modern-day text interfaces including autocomplete, flagging misspelled words and spelling auto-correct. In each module you’ll add a bit more functionality to your editor through the project associated with that module.
 
-6. 
+6. 最后实现的text/word processor包括的功能有，Spell check, Spell suggestion and auto-suggestion.
+
+7. Flesch index的概念。
+
+8. 
