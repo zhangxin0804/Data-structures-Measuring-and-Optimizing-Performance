@@ -43,7 +43,7 @@ Concatenates the specified string to the end of this string.
 【1】不管字符串池中是否存在"Hello World!" ，直接新建一个字符串"Hello World!"（注意：新建的字符串"Hello World!" 
 不是在字符串池中而是在heap中）,然后将其赋给text.
 
-【2】和【3】这种方式，没有explictly使用new关键字来创造的字符串对象，叫做interned string, 它们是string pool里的string.
+【2】和【3】这种方式，没有explicitly使用new关键字来创造的字符串对象，叫做interned string, 它们是string pool里的string.
 首先查看字符串池中是否存在字符串"Hello World!" ，如果存在则直接将"Hello World!"地址赋给text1 ，如果不存在则先在字符串池中新建一个
 字符串"Hello World!"，然后再将其赋给text1
 
@@ -51,5 +51,11 @@ Concatenates the specified string to the end of this string.
 
 Useful Link: http://blog.sina.com.cn/s/blog_7c447f810100wf1j.html
 
-10. 
+10. 如何计算 number of syllables will involve looking at the characters in a string.
+
+11. 注意enhanced for loop的使用，也即for-each loop的使用。
+
+12. 
+
+
 
