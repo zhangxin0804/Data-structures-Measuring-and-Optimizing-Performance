@@ -15,4 +15,6 @@ HashMap.
 
 8. Edit Distance(编辑距离): modify one letter at each step
 
-9. 
+9. Markov Text: predictive text creation
+
+10. 
