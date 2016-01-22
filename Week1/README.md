@@ -1,4 +1,5 @@
 1. How the Flesch Readability Score can be used to determine the readability of text?
+https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
 
 2. Regular Expression正则表达式。
 
@@ -24,9 +25,11 @@ long sentences and long word 即长的句子和音节较多的长单词 --> term
 5. 注意两个常量参数，1.015和84.6是两个weight value权值，用于公式中的计算。 表示的含义是，longer words make text a little more
 difficult to read than longer sentences.
 
-6. 在Java中，字符串String是对象object, 是在heap上创建的。简单的来看，String are represented as an array of characters.
+6. 在Java中，字符串String是对象object, 是在heap上创建的。简单的来看，String are represented as an array of characters. 
+即字符串在heap上的representation是字符数组。 http://docs.oracle.com/javase/7/docs/api/
 
-7. 在Java中，String is immutable which means no way to change it.
+
+7. 在Java中，String is immutable which means no way to change it. 在Java中，字符串是不可变对象！！！！
 
 8. 
 String	concat(String str)
@@ -43,7 +46,7 @@ Concatenates the specified string to the end of this string.
 【1】不管字符串池中是否存在"Hello World!" ，直接新建一个字符串"Hello World!"（注意：新建的字符串"Hello World!" 
 不是在字符串池中而是在heap中）,然后将其赋给text.
 
-【2】和【3】这种方式，没有explicitly使用new关键字来创造的字符串对象，叫做interned string, 它们是string pool里的string.
+【2】和【3】这种方式，没有explicitly使用new关键字来创造的字符串对象，叫做interned string object, 它们是string pool里的string.
 首先查看字符串池中是否存在字符串"Hello World!" ，如果存在则直接将"Hello World!"地址赋给text1 ，如果不存在则先在字符串池中新建一个
 字符串"Hello World!"，然后再将其赋给text1
 
@@ -84,7 +87,7 @@ http://stackoverflow.com/questions/22812488/using-javafx-in-jre-8
 
 
 
-Regular Expression: Characters are base units.
+Regular Expression: Characters are base units. 可以参考Java API doc的Pattern Class.
 有3种方法，对正则表达式进行扩展：repetition, concatenation, alternation(either/or)
 然后可以对这些方法进行组合。
 
@@ -192,6 +195,11 @@ Expression 			Matches
 ￼
 
 -----------------------------------------------------
+
+
+注意1: 逗号(,)在Java的regex中并没有实际的特殊意义, 因此如果regex expression中包含有(,)那就是匹配逗号(,)的含义。
+
+注意2: 
 
 
 
