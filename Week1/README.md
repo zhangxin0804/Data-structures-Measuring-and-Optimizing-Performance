@@ -73,7 +73,18 @@ Returns the index within this string of the first occurrence of the specified su
 14. char[]	toCharArray()
 Converts this string to a new character array.相当于是return了一个new copy array.
 
-15. Regular Expression: Characters are base units.
+15. 这门课的porject需要eclipse sdk4.5 + jdk1.8 + javaFX(一个GUI的java framework)
+其中starter code导入eclipse可能会遇到对javaFX的jar包的access restriction, 解决方法如下：
+http://stackoverflow.com/questions/22812488/using-javafx-in-jre-8
+
+
+
+
+
+
+
+
+Regular Expression: Characters are base units.
 有3种方法，对正则表达式进行扩展：repetition, concatenation, alternation(either/or)
 然后可以对这些方法进行组合。
 
@@ -179,6 +190,8 @@ Expression 			Matches
 ￼ "abc" 		The characters abc in a row
   "a|b" 	 	The character a or the character b
 ￼
+
+-----------------------------------------------------
 
 
 
