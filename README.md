@@ -13,4 +13,6 @@ HashMap.
 
 7. Flesch index的概念。
 
-8. 
+8. Edit Distance(编辑距离): modify one letter at each step
+
+9. 
