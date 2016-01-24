@@ -1,0 +1,31 @@
+1. 这门课中，也涉及到GUI的部分，但是前端front-end的GUI部分，已经由UCSD的starter code提供好了。这部分是基于JavaFX框架来实现GUI的。
+还有一种Java实现GUI的方式是通过Swing框架. 
+http://www.zhihu.com/question/37236236
+
+2. 注意Java中关于正则表达式使用的两个很关键的类。一个是Pattern，一个是Matcher. 具体使用方法如下：
+
+A regular expression, specified as a string, must first be compiled into an instance of Pattern class.
+The resulting pattern can then be used to create a Matcher object that can match arbitrary character sequences follows the regular expression.
+
+public boolean find()
+Attempts to find the next subsequence of the input sequence that matches the pattern.
+
+public String group()
+Returns the input subsequence matched by the previous match.
+
+	import java.util.regex.Matcher;
+	import java.util.regex.Pattern;
+
+	String text = "待检测字符串";
+	String pattern = "#regex expression#"; // 字符串表示的正则匹配规则
+	Pattern p = Pattern.compile(pattern); // 先compile一个符合pattern规则的Pattern对象
+	Matcher m = p.matcher(text); // 再根据待检测输入text, 创建一个Matcher对象
+	while (m.find()) {
+		System.out.println(m.group());
+	}
+
+
+3. 抽象类Document中，有一个static方法叫做 testCase(), 这个方法可以被子类 BasicDocument继承，从而进行一些测试，来验证用于进行
+public int getNumSentences(), public int getNumWords(), public int getNumSyllables()的正则表达式是否正确。
+
+4. 

@@ -12,9 +12,8 @@ Flesch score = 206.835 - 1.015 * ( #words/#sentences ) - 84.6 * ( #syllables/#wo
 quantifies                              term1  					        term2
 readability
 
-注意term1, 实际上表达的就是 平均每个sentence包含多少个words
-注意term2, 实际上表达的就是 平均每个word包含多少个syllables(音节)
-
+注意term1, 实际上表达的就是： 平均每个sentence包含多少个words
+注意term2, 实际上表达的就是： 平均每个word包含多少个syllables(音节)
 
 情况1：
 short sentence and short word 即短的句子和短的单词 --> term值相对low --> Flesch score相对high ( >90 easy to read )
@@ -33,10 +32,10 @@ difficult to read than longer sentences.
 
 8. 
 String	concat(String str)
-Concatenates the specified string to the end of this string.
+Concatenates the specified string to the end of this string. Return a new string object.
 这个API返回的是一个新的String对象。
 
-9. 一个新的概念叫做 interned string就是表示one object.
+9. 一个新的概念叫做 interned string 就是表示one object.
 
 【1】String text = new String("Hello World!");
 【2】String text1 = "Hello World!";
