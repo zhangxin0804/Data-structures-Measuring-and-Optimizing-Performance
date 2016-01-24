@@ -28,4 +28,24 @@ Returns the input subsequence matched by the previous match.
 3. 抽象类Document中，有一个static方法叫做 testCase(), 这个方法可以被子类 BasicDocument继承，从而进行一些测试，来验证用于进行
 public int getNumSentences(), public int getNumWords(), public int getNumSyllables()的正则表达式是否正确。
 
-4. 
+4. 注意：一个document或者说一个字符串中，从上一个句子的结束开始，到整个document或者说整个字符串以字符序列结尾的话， 即使没有end of line
+punctuation mark也算一个sentence. 比如：Segue这就是一个sentence
+
+作业中用于断句的正则表达式写的比较naive, 有些corner case的处理并不是很恰当。如下所述：
+Our REGEX are pretty naive. For example, the word 7.5 causes real problems for our expressions as a “.” usually denotes the end of a sentence. 
+
+5. 关于如何统计每个word的音节数syllable, 此次作业中有作业中的rules, 虽然他不符合实际英语语言的规定，但是为了统一测试标准，规定如下：
+
+To count the number of syllables in a word, you should use the following rule:
+
+Each contiguous sequence of one or more vowels is a syllable, with the following exception: a lone "e" at the end of a word is not considered a syllable unless the word has no other syllables. You should consider y a vowel.
+
+Under these rules the words “the”, “fly”, “yes”, “cave” and “double” all have 1 syllable, but "segue" has two syllables. Notice that this isn’t exactly correct (“double” actually has 2 syllables), but it’s close enough for our purposes. Here are some more examples with the number of syllables your method should return to help you: "contiguous" (3 syllables), "sleepy" (2 syllables), "obvious" (2 syllables), "toga" (2 syllables). Notice that our rules get a lot wrong, especially when you have more than 2 vowels in a row, but these are the rules we will test you against.
+
+6. 注意！！！在判断每个word里的 number of syllables即音节数时，要对每个字符做判断，别忘了大小写！！！元音 a,e,i,o,u + y, 还有大写字母！！
+因此，我们可以考虑对每个word, 都先转换成小写形式，再统一处理。
+
+7. 
+
+
+

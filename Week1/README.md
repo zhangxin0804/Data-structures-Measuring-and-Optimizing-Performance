@@ -189,6 +189,7 @@ Expression 			Matches
   "[a-f]" 		Any character between a and f
 ￼ "[^a-cz]" 	Any character which is not between a-c and not z
 ￼ "[abc]+" 		1 or more of the character a, b, or c in a row
+  "[^abc]+" 	1 or more of the character which is not in set{a,b,c}
 ￼ "abc" 		The characters abc in a row
   "a|b" 	 	The character a or the character b
 ￼
