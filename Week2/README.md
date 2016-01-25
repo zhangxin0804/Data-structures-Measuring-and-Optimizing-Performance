@@ -13,5 +13,21 @@
 
 7. best case, average case, and worst case.
 
-8. 
+8.                   Best Case           Worst Case
+
+Selection Sort         O(n^2)               O(n^2)
+Insertion Sort         O(n)                 O(n^2)
+
+9. Merge Sort: Basic Algorithm
+	If list has one element, return
+
+	Divide list in half
+	Sort first half (recursion)
+	Sort second half (recursion)
+
+	Merge Sorted list
+
+10. 
+
+
 
