@@ -1,0 +1,26 @@
+1. Abstract Data Type (ADT) often manifest themselves as either interfaces or abstract class in Java. 但是, abstract
+notion of list goes beyond a specific programming language. You can think of a grocery list of a list of students. These
+things are not directly related to code. Therefore, this idea of abstract data type is broder than just a particular
+implementation in a particular programming language. It is really just this abstract concept of how we interact with this
+data. 
+
+2. Describe the difference between an Abstract Data Type (ADT) and a Data Structure.
+
+3. Implement Generic classes in Java. 泛型！！<E> or <T>具体看笔记。
+
+4. Throw Exceptions to indicate errors. 异常处理, unchecked exception V.S. checked exception
+对于checked exception, 我们需要在相应的方法处 declare throw exception.
+
+5. 注意：Markov Text Generator产生的一些text从字面理解上并不make sense, 但是对于Markov Text是make sense的。
+
+6. How can we increase confidence of our code?
+	(1) Be critical of our algorithms/code 
+	(2) Consider/test corner cases
+	(3) Attempt to formally reason about correctness 
+	(4) Create automated test cases
+
+7. Unit test is used to test small pieces of code. 
+
+
+￼￼￼
+
