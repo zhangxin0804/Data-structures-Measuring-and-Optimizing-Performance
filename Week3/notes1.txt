@@ -6,7 +6,24 @@ data.
 
 2. Describe the difference between an Abstract Data Type (ADT) and a Data Structure.
 
-3. Implement Generic classes in Java. 泛型！！<E> or <T>具体看笔记。
+3. Implement Generic classes in Java. 泛型！！<E> or <T>具体看笔记，注意根据实际场合来决定什么时候需要用泛型。
+
+	// 相当于是Node class, 注意这里也是generic programming
+	class LLNode<E> {
+		LLNode<E> prev;
+		LLNode<E> next;
+		E data;
+
+		// TODO: Add any other methods you think are useful here
+		// E.g. you might want to add another constructor
+		// 注意：构造函数这里的写法并不是 LLNode<E>, 没有<E>
+		public LLNode(E e) {
+			this.data = e;
+			this.prev = null;
+			this.next = null;
+		}
+	}
+
 
 4. Throw Exceptions to indicate errors. 异常处理, unchecked exception V.S. checked exception
 对于checked exception, 我们需要在相应的方法处 declare throw exception.
@@ -27,7 +44,15 @@ data.
 8. Unit test is used to test small pieces of code or units of code. In Eclipse, JUnit allows us to write and run 
 unit tests.
 
-9. 
+9. 注意：LinkedList的使用和实现中，有一个很重要的概念叫做 dummy node 或者说 sentinel node (哨兵节点). 方便操作。
+
+10. 编程作业中，我们自己要实现一个doubly linked list叫做 MyLinkedList, 其中它支持generic type 也即 MyLinkedList<E>
+根据starter code, 该 MyLinkedList<E> extends AbstractList<E>, 因此需要注意，父类中有一个abstract method必须在该子类中实现，就是
+abstract E	get(int index)
+Returns the element at the specified position in this list.
+
+11. 
+
 
  
 
