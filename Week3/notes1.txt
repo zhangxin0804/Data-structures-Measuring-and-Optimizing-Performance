@@ -28,6 +28,10 @@ data.
 4. Throw Exceptions to indicate errors. 异常处理, unchecked exception V.S. checked exception
 对于checked exception, 我们需要在相应的方法处 declare throw exception.
 
+一些常见的Unchecked Exception如下：
+throw new IndexOutOfBoundsException("Your Message");
+
+
 5. 注意：Markov Text Generator产生的一些text从字面理解上并不make sense, 但是对于Markov Text是make sense的。
 
 6. How can we increase confidence of our code?
