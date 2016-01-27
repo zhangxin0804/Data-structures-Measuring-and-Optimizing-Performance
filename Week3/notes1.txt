@@ -19,7 +19,17 @@ data.
 	(3) Attempt to formally reason about correctness 
 	(4) Create automated test cases
 
-7. Unit test is used to test small pieces of code. 
+7. 	There are two testing styles. 
+【1】	Black Box Testing (黑盒测试); Only tests through the interface, 给定输入只需要对比输出结果和理想输出结果是否一致。对于一些不熟悉内部implementation的人来说，测试会更容易些。
+【2】   White Box Testing (白盒测试); Tests which know about the implementation.
+	
+
+8. Unit test is used to test small pieces of code or units of code. In Eclipse, JUnit allows us to write and run 
+unit tests.
+
+9. 
+
+ 
 
 
 ￼￼￼
