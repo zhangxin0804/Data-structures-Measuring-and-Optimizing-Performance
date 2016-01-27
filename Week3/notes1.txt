@@ -30,6 +30,8 @@ data.
 
 一些常见的Unchecked Exception如下：
 throw new IndexOutOfBoundsException("Your Message");
+throw new NullPointerException("Your Message");
+
 
 
 5. 注意：Markov Text Generator产生的一些text从字面理解上并不make sense, 但是对于Markov Text是make sense的。
@@ -55,7 +57,12 @@ unit tests.
 abstract E	get(int index)
 Returns the element at the specified position in this list.
 
-11. 
+11. Testing的几个原则！！！
+【1】Consider corner cases when testing
+【2】Test common use cases
+【3】Remember test has cost, particularly tests which are run repeatedly (like unit test). Learn to avoid redundant tests.
+
+12. 
 
 
  
