@@ -1,3 +1,8 @@
 1. 根据Markov Process的概念，我们考虑最简单的实现。For each new word, we need to keep track of  【 word + next word 】
 
-2. 
+2. 注意我们之前在notes中提到的概率probabilities,换句话说根据current word, 我们predict next word是depend on transition probability
+的。比如 hello -> I (3/6), hello -> why (1/6), hello -> you (2/6). 因此，我们可以考虑对每一个current word, 用一个ListNode数据结构
+来表示，同时包括一个list of nextWords, 去不断加入，当前这个word 之后可能出现的words, 即使有重复的我们也不care, 还是不断add进去，这样之后
+我们可以利用随机函数，来选择nextWord, 这样即Pick randomly 也 pick uniformaly, 符合转移概率！！因为出现的的多的，必然更容易被pick.
+
+3. 
