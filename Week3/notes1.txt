@@ -33,8 +33,21 @@ throw new IndexOutOfBoundsException("Your Message");
 throw new NullPointerException("Your Message");
 
 
-
 5. 注意：Markov Text Generator产生的一些text从字面理解上并不make sense, 但是对于Markov Text是make sense的。
+
+One model of predicting what's going to come next based on training data that we have accumulated.
+
+Predicting Future: Markov Process
+Assign probabilities to what's going to happen next, which state will have to transition to based on our current state.
+
+Step1: 
+Build model based on data, transition probabilities between nodes depend on frequencies of word pairs in training
+data
+
+Step2: 
+Use model to predict next text.
+
+
 
 6. How can we increase confidence of our code?
 	(1) Be critical of our algorithms/code 
@@ -42,13 +55,17 @@ throw new NullPointerException("Your Message");
 	(3) Attempt to formally reason about correctness 
 	(4) Create automated test cases
 
-7. 	There are two testing styles. 
+7. 	There are two testing styles.  黑盒测试或者是白盒测试，要根据实际需求来。
 【1】	Black Box Testing (黑盒测试); Only tests through the interface, 给定输入只需要对比输出结果和理想输出结果是否一致。对于一些不熟悉内部implementation的人来说，测试会更容易些。
 【2】   White Box Testing (白盒测试); Tests which know about the implementation.
 	
 
 8. Unit test is used to test small pieces of code or units of code. In Eclipse, JUnit allows us to write and run 
 unit tests.
+	JUnit 是一个基于Java语言开发的unit test框架。通过在eclipse中，选定你要做unit test的project 的properties, 然后选择java build
+path，再add library, 就可以把JUnit库加入到project中。
+	具体JUnit的使用和注意事项，可以参考面试基础知识整理笔记！！！
+
 
 9. 注意：LinkedList的使用和实现中，有一个很重要的概念叫做 dummy node 或者说 sentinel node (哨兵节点). 方便操作。
 
