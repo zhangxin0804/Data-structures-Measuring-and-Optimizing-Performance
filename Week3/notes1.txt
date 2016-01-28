@@ -64,6 +64,7 @@ Use model to predict next text.
 unit tests.
 	JUnit 是一个基于Java语言开发的unit test框架。通过在eclipse中，选定你要做unit test的project 的properties, 然后选择java build
 path，再add library, 就可以把JUnit库加入到project中。
+	Main components: 【1】code to setup tests; 【2】code to perform tests; 【3】code to cleanup tests.
 	具体JUnit的使用和注意事项，可以参考面试基础知识整理笔记！！！
 
 

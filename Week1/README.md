@@ -142,6 +142,8 @@ Assume you have a Document object, d, whose text is
 
 d.getTokens("it|st"); ----> ["it", "st", "it"]
 | means OR
+注意！！！！这里是或的意思，就是说每次都可以匹配出或的那些！但是不代表能够匹配 或的union, 比如如果输入是 itst, 那么匹配出的是 it和st, 而不是
+itst这个整体，注意！！！！
 ------------------------------------
 
 
