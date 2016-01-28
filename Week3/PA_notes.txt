@@ -5,4 +5,11 @@
 来表示，同时包括一个list of nextWords, 去不断加入，当前这个word 之后可能出现的words, 即使有重复的我们也不care, 还是不断add进去，这样之后
 我们可以利用随机函数，来选择nextWord, 这样即Pick randomly 也 pick uniformaly, 符合转移概率！！因为出现的的多的，必然更容易被pick.
 
+Distribution of probabilities for each distinct word matches exactly what we need.从而可以保证 generate next word with
+correct probability.
+
 3. 
+int	nextInt()
+Returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence.
+
+4. 
