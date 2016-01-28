@@ -1,0 +1,3 @@
+1. 根据Markov Process的概念，我们考虑最简单的实现。For each new word, we need to keep track of  【 word + next word 】
+
+2. 
