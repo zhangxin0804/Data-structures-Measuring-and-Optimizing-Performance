@@ -4,4 +4,6 @@
 
 3. Define the notion of edit distance. 编辑距离的概念。
 
-4. 
+4. HashTable Idea: If I want to add something into an array, could I find a way to translate it into index.
+
+5. 
