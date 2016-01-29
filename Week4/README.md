@@ -22,4 +22,8 @@ Order we visit matters and we'll make choices based on out needs. 可以再去�
 
 6. 注意BST search的实现方式。 其中有一点：Don't change root pointer.
 
-7. 
+7. 注意BST insert和BST remove的实现方式。
+
+8. There is no rule that BSTs will be full trees( or balanced ).
+
+9. 
