@@ -20,7 +20,9 @@ table, new hash function, and reinserting everything. 注意：resize cost是很
 	
 	Drawback 2: no data ordering.
 
-7. 
+7. 多去看看面试基础知识笔记整理！！！！！
+
+8. 
 
 
 
