@@ -1,5 +1,6 @@
 1. Tree Data Structure
-实际中的一些应用比如：决策树 decision tree, 表达式树 expression tree, 文件系统 file system, 
+实际中的一些应用比如：决策树 decision tree, 表达式树 expression tree, 文件系统 file system.
+一些比较复杂的tree结构比如：red-black tree红黑树, AVL树。 
 
 	Root is most important – Heap
 	Organized by character frequency – Huffman Tree or Compression Tree
@@ -26,4 +27,19 @@ Order we visit matters and we'll make choices based on out needs. 可以再去�
 
 8. There is no rule that BSTs will be full trees( or balanced ). 注意：BST是不是balanced决定着它的一些操作的performance.
 
-9. 
+9. The order in which we put elements into a binary search tree impacts the shape. And the shape of the binary search tree
+will have a huge impact on the performance of operations with that binary search tree.
+
+10. Structure of a BST depends on the order of insertion.
+
+11. How to defin balanced BST?  左右子树高度差不超过1。
+ |Left Subtree height - Right Subtree height| <= 1
+
+12. Java already has a built-in implementation of balanced binary search tree  ------ TreeSet类。
+
+13. Trie的常见操作就是 search 和 add. 一般我们假设都是alphabetic字符，这样每一个Trie Node都有固定数量的，可以往下延伸的branches.
+
+14. 
+
+
+
