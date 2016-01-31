@@ -39,7 +39,11 @@ will have a huge impact on the performance of operations with that binary search
 
 13. Trie的常见操作就是 search 和 add. 一般我们假设都是alphabetic字符，这样每一个Trie Node都有固定数量的，可以往下延伸的branches.
 
-14. 
+14. 注意：虽然Trie相比balanced BST, 在查找的时间效率上更优，但是Trie的一个最大问题就是，空间消耗太大！！！！！！！！
+
+15. 前面提到Trie数据结构在空间上的消耗是比较大的，因为对于每一个TrieNode, 假设只考虑小写字母，那么每一个TrieNode都要往下拓展26个branches, 换句话说如果用array来存储每次都要开辟26个位置来存储下一层的TrieNode, 但其实很多位置都是空的，因此浪费了空间，所以我们可以考虑用HashMap<Character, TrieNode>结构来存储！！节省空间！！
+
+16. 
 
 
 
